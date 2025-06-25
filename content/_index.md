@@ -28,9 +28,9 @@ draft: false
 -----------
 
 {{< cards >}}
-  {{< card link="/about#read-police-internal-affairs-reports" title="Read Police Internal Affairs Reports" image="images/police-crying.webp" subtitle="Search for and read disciplinary reports on bad apple law enforcement personnel in the USA." method="Resize" options="400x q80 webp" >}}
-  {{< card link="/about#heatmap-of-police-misconduct" title="Heatmap of Police Misconduct" image="images/police-misconduct-map.webp" subtitle="Generate reports, graphs, and heat maps of reported police misconduct." method="Resize" options="400x q80 webp" >}}
-  {{< card link="/about#know-when-bad-cops-are-hired" title="Know When Bad Cops Are Hired in Your Community" image="images/police-hired.webp" subtitle="Track when previously fired police officers are hired elsewhere." method="Resize" options="400x q80 webp" >}}
+  {{< card link="about#read-police-internal-affairs-reports" title="Read Police Internal Affairs Reports" image="images/police-crying.webp" subtitle="Search for and read disciplinary reports on bad apple law enforcement personnel in the USA." method="Resize" options="400x q80 webp" >}}
+  {{< card link="about#heatmap-of-police-misconduct" title="Heatmap of Police Misconduct" image="images/police-misconduct-map.webp" subtitle="Generate reports, graphs, and heat maps of reported police misconduct." method="Resize" options="400x q80 webp" >}}
+  {{< card link="about#know-when-bad-cops-are-hired" title="Know When Bad Cops Are Hired in Your Community" image="images/police-hired.webp" subtitle="Track when previously fired police officers are hired elsewhere." method="Resize" options="400x q80 webp" >}}
 {{< /cards >}}
 
 
