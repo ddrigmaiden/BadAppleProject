@@ -1,18 +1,11 @@
 ---
 title: "About the Bad Apple Project"
 layout: no-sidebars
-sidebar:
-  exclude: true
-toc: false
 date: 2025-06-10T19:25:32-07:00
 draft: false
 ---
 
-<div style="text-align:center;">
-  <h1>Bad Apple Project White Paper</h1>
-  <span>v.1.0 (Jun. 25, 2025)</span>
-  <img src="images/bad-apple-logo-compressed.svg" style="width:500px;margin-top:50px" alt="landscape">
-</div>
+{{< badapple-logo >}}
 
 ## Summary
 
