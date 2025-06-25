@@ -14,7 +14,7 @@ params:
     logo:
       path: images/bad-apple-logo-compressed.svg
       dark: images/bad-apple-logo-dark-compressed.svg
-      link: /
+      link: ""
       width: 70
       height: 70
   footer:
