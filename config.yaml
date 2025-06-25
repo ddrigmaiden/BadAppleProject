@@ -1,0 +1,65 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Bad Apple Project
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+params:
+  description: The Bad Apple Project is a database of law enforcement misconduct and internal affairs reports filed against police officers and similarly titled law enforcement personnel working for state, county, and city level law enforcement offices such as police departments, sheriff departments, and highway patrol offices.
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/bad-apple-logo-compressed.svg
+      dark: images/bad-apple-logo-dark-compressed.svg
+      link: /
+      width: 70
+      height: 70
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+  page:
+    # full (100%), wide (90rem), normal (80rem)
+    width: normal
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+menu:
+  main:
+    - name: Main
+      pageRef: /
+      weight: 1
+    - name: About
+      pageRef: /about
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/ddrigmaiden/badapple"
+      params:
+        icon: github
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ["$$", "$$"]]
+          inline: [['\(', '\)']]
+        enable: true
+
+enableInlineShortcodes: true
+
