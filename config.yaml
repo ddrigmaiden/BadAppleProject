@@ -30,24 +30,6 @@ params:
     default: system
     displayToggle: true
 
-menu:
-  main:
-    - name: Main
-      pageRef: /
-      weight: 1
-    - name: About
-      pageRef: /about
-      weight: 3
-    - name: Search
-      weight: 4
-      params:
-        type: search
-    - name: GitHub
-      weight: 5
-      url: "https://github.com/ddrigmaiden/BadAppleProject"
-      params:
-        icon: github
-
 markup:
   highlight:
     noClasses: false
@@ -63,3 +45,36 @@ markup:
 
 enableInlineShortcodes: true
 
+menu:
+  main:
+    - identifier: main
+      name: Main
+      pageRef: /
+      weight: 1
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/ddrigmaiden/BadAppleProject"
+      params:
+        icon: github
+
+  sidebar:
+    - identifier: main
+      name: Main
+      pageRef: /
+      weight: 1
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 3
+    - identifier: GitHub
+      name: "Bad Apple GitHub ↗"
+      url: "https://github.com/ddrigmaiden/BadAppleProject"
+      weight: 3
