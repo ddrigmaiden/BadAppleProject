@@ -44,7 +44,7 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/ddrigmaiden/badapple"
+      url: "https://github.com/ddrigmaiden/BadAppleProject"
       params:
         icon: github
 
