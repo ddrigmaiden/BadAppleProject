@@ -1,6 +1,9 @@
 ---
 title: "About the Bad Apple Project"
-layout: no-sidebars
+layout: no-sidebar-with-toc
+sidebar:
+  exclude: true
+toc: true
 date: 2025-06-10T19:25:32-07:00
 draft: false
 ---
