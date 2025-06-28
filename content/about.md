@@ -8,7 +8,11 @@ date: 2025-06-10T19:25:32-07:00
 draft: false
 ---
 
-{{< badapple-logo >}}
+<div style="text-align:center;">
+    <h1>Bad Apple Project White Paper</h1>
+    <span>v.1.0.1 (Jun. 27, 2025)</span>
+    {{< badapple-logo >}}
+  </div>
 
 ## Summary
 
@@ -20,11 +24,11 @@ Although law enforcement misconduct and internal affairs reports are technically
 
 Our database and web app serves three overarching use cases:
 
-1. **Read Police Internal Affairs Reports** - Allow for users to search for and read disciplinary reports on bad apple law enforcement personnel in the USA.
+1. **Read Internal Affairs Reports** - Allow for users to search for and read disciplinary reports on bad apple law enforcement personnel in the USA.
 2. **Heatmap of Police Misconduct** - Facilitate generating reports, graphs, and heat maps of reported law enforcement misconduct.
 3. **Know When Bad Cops Are Hired** - Track individual law enforcement personnel after they offend at one job and continue to offend after getting hired to a new job with a different law enforcement entity.
 
-### Read Police Internal Affairs Reports
+### Read Internal Affairs Reports
 
 We currently have a set of approximately 250 internal affairs reports with leads on several hundred more that have been uploaded to DocumentCloud and other servers since the time of our original collection effort. We will make all available reports part of the Bad Apple database. Users will be able to use our web app to read both the full reports and summaries that include the name of the offending law enforcement officer, the alleged conduct, and the results of the internal affairs investigation.
 
@@ -38,7 +42,7 @@ Our web app will allow for users to search by offending officer name or by locat
 
 ## Technology Stack
 
-The Bad Apple database and web app will rely on client side web browser technology and the decentralized web for hosting. Our system for collecting processing internal affairs reports includes using PDF pre-processing utilities, optical character recognition (OCR), artificial intelligence (AI) large language model (LLM) for classification, and human review to verify AI work product. Further details on the technical aspects of the Bad Apple Project are outlined below.
+The Bad Apple database and web app will rely on client side web browser technology and the decentralized web for hosting. Our system for collecting and processing internal affairs reports includes using PDF pre-processing utilities, optical character recognition (OCR), an artificial intelligence (AI) large language model (LLM) for classification, and human review to verify AI work product. Further details on the technical aspects of the Bad Apple Project are outlined below.
 
 ```mermaid
 %%{init: { "graph": { "wrap": true, "width":300 } } }%%
@@ -49,7 +53,7 @@ graph LR
     C -- Human Review --> D@{ shape: cyl, label: "JSON Data" }
     F --> D
     D --> E["Decentralized Web (JSON/JSONL/PDF Reports)"]
-    E --> G(Display Web App)
+    E --> G(Public Web App)
 
     style A fill:#ccf,stroke:#333,stroke-width:2px
     style B fill:#ccf,stroke:#333,stroke-width:2px
@@ -62,7 +66,7 @@ graph LR
 
 ### Bad Apple Project Database
 
-The Bad Apple database will be hosted from the decentralized web using JSON and JSONL files. The original PDF reports will also be hosted from the decentralized web, allowing for users to verify the data in the database or obtain further information by opening the original reports. Independent researchers and developers will also be able to create their own custom presentations of the data using the JSONL files and JSON schema files. The entire database is inherently open source and portable.
+The Bad Apple database will be hosted from the decentralized web using JSON and JSONL files. The original PDF reports will also be hosted from the decentralized web, allowing for users to verify the data in the database or obtain further information by opening the original reports. In addition to our public web app, independent researchers and developers will be able to create their own custom presentations of the data using the JSONL files and JSON schema files. The entire database is inherently open source and portable.
 
 The Bad Apple database will consist of the following data fields:
 
@@ -79,7 +83,7 @@ The Bad Apple database will consist of the following data fields:
 
 A web app coded in Angular will serve as the interface to search the database and display the data. The web app will present the facts and findings from the reports themselves in a clearer and easier to understand manner, while linking directly to the reports that the information was entered from, for authenticity.
 
-No server-side processing will be required to run the web app. The web app relies solely on JavaScript and technology built into all modern web browsers. The entire database and web app could even be downloaded and run locally in a web browser with no internet access.
+No server-side processing will be required to run the web app. The web app relies on JavaScript and other technology built into all modern web browsers. The entire database and web app could even be downloaded and run locally in a web browser with no internet access.
 
 ### Pre-processing Report PDF Files
 
@@ -99,7 +103,7 @@ The interface used to manually process the reports will be a client-side Angular
 
 Once a report is fully annotated and mapped to the database fields, the web app will generate a JSON file containing a fingerprint of the PDF file, box coordinates for each PDF annotation, the database field mapping data, and the text for the database fields. The web app will allow for saving the JSON file locally.
 
-The JSON data and PDF report can then be used together to populate the public decentralized website that users visit to access, search, and display the Bad Apple Project data. The JSON data and PDF report will also be used together in the LLM fine-tuning workflow described above.
+The JSON data and PDF report can then be used together to populate the decentralized database behind the web app used to access, search, and display the Bad Apple Project data. The JSON data and PDF report will also be used together in the LLM fine-tuning workflow described above.
 
 Once the fine-tuned LLM is capable of producing the JSON data for any given report, the same client-side Angular interface used to manually process reports can be used to open the AI&#8217;s work, verify the data, make corrections, and feed the data back into the LLM fine-tuning workflow as new training data.
 

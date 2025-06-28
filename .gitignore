@@ -1,1 +1,7 @@
-/public/
+# Hugo
+public/
+resources/_gen/
+resources/_cache/
+_vendor/        # <--- Add this line
+.hugo_build.lock
+.DS_Store
